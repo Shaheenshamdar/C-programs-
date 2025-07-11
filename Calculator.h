@@ -1,8 +1,9 @@
-#include<iostrem>
-void calculator (){
+#ifndef CALCULATOR_H
+#define CALCULATOR_H
 
-int add(int p, int q);
-int subtract(int p, int q);
-int multiply(int p, int q);
-double divide(int p, int q); 
-}
+int add(int a, int b);
+int subtract(int a, int b);
+int multiply(int a, int b);
+int divide(int a, int b);
+
+#endif
