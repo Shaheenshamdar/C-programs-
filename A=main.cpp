@@ -1,33 +1,40 @@
 #include <iostream>
-#include "calculator.h"
 using namespace std;
 
-int add(int c, int d) {
-    return c + d;
-}
+void show() {
+    double a,b;
+    char op;
 
-int subtract(int c, int d) {
-    return c - d;
-}
+    cout<<"Enter First Number:";
+    cin>>a;
+    cout<<"Enter Second Number:";
+    cin>>b;
+    cout<<"Enter Operator(+,-,*,/):";
+    cin>>op;
 
-int multiply(int c, int d) {
-    return c * d;
-}
-
-int divide(int c, int d) {
-    if (d == 0) {
-        return 0;
+    switch(op) {
+        case '+':
+            cout<<"Addition:"<<a+b;
+            break;
+        case '-':
+            cout<<"Subtraction:"<<a-b;
+            break;
+        case '*':
+            cout<<"Multiplication:"<<a*b;
+            break;
+        case '/':
+            if(b!=0) {
+                cout<<"Division:"<<a/b;
+            }else{
+                cout<<"Invalid Division!";
+            }
+            break;
+        default:
+            cout<<"Error!Invalid Operator";
     }
-    return c / d;
 }
 
 int main() {
-    int x = 10, y = 5;
-
-    cout << add(x, y) << endl;
-    cout << subtract(x, y) << endl;
-    cout << multiply(x, y) << endl;
-    cout << divide(x, y) << endl;
-
+    show();
     return 0;
 }
